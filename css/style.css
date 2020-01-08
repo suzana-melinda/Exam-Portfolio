@@ -1,0 +1,789 @@
+html, body, .grid-container { height: 100%; margin: 0; }
+
+body {background-image:url('../img/sky.jpg');
+    background-size:cover;
+        text-align:center;
+
+}
+
+h3, p {font-family:Bahnschrift;color: #092f4f;}
+h1, h2 {font-family: Britannic;color: #092f4f;}
+
+.grid-container * { 
+ 
+ position: relative;
+ 
+}
+
+.grid-container *:after { 
+
+ position: absolute;
+ top: 0;
+ left: 0;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.3fr 1fr 1fr;
+  grid-template-areas: "header header header header" "description description basic-web basic-ux" "description description basic-animation basic-content";
+}
+
+.header { grid-area: header; }
+
+.basic-web { grid-area: basic-web; }
+
+.basic-ux { grid-area: basic-ux; }
+
+.basic-animation { grid-area: basic-animation; overflow:hidden;}
+
+.basic-content { grid-area: basic-content; overflow:hidden;}
+
+.description { grid-area: description;}
+
+
+#branding img {width:30%;
+    height: auto;
+    margin-right: auto;
+    float: left;
+    display: block;
+    margin-left:5%;
+}
+
+.text{width: 90%;
+      height: 90%;
+      margin: 5%;
+    border-radius: 25%;
+    background:rgba(25, 122, 207, 0.8);
+}
+
+.web{width: 80%;
+      height: 80%;
+      margin: 10%;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    border-top-right-radius: 50% ;
+    background:rgba(25, 122, 207, 0.8);}
+
+
+.ux{width: 80%;
+     height: 80%;
+      margin: 10%;
+    border-top-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-top-right-radius: 50% ;
+    background:rgba(87, 151, 207, 0.8);}
+
+
+.animation {width: 80%;
+     height: 80%;
+     margin: 10%;
+    border-top-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 50% ;
+    background:rgba(63, 110, 151, 0.8);}
+
+
+.content{width: 80%;
+      height: 80%;
+     margin: 10%;
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    border-top-right-radius: 50% ;
+    background:rgba(15, 77, 130, 0.8);}
+ 
+ .web h1, .ux h1, .animation h1, .content h1  { padding-top: 30px;
+      border-bottom-style: none;
+    font-size: 20px;
+      
+     }
+
+ 
+ 
+    
+    
+}
+
+
+.hello,.welcome,.details{color: aliceblue; padding: 10px;}
+.hello {font-size: 55px;
+ }
+.welcome {font-size: 35px;
+ }
+.details {font-size: 25px;}
+
+
+
+
+/* NAVIGATION*/
+
+
+#menu{
+	width: 35px;
+	height: 30px;
+	margin: 30px 30px 20px 10px;
+	cursor: pointer;
+
+}
+.bar{
+	height: 5px;
+	width: 100%;
+	background-color: #092f4f;
+	display: block;
+	border-radius: 5px;
+	transition: 0.3s ease;
+}
+#bar1{
+	transform: translateY(-4px);
+}
+#bar3{
+	transform: translateY(4px);
+}
+.nav li a{
+	color: #fff;
+	text-decoration: none;
+    
+}
+.nav li a:hover{
+	font-weight: bold;
+}
+.nav li{
+	list-style: none;
+	padding: 10px 0;
+}
+.nav{
+	padding: 0;
+	margin: 0 1px;
+	transition: 0.3s ease;
+	display: none;
+   
+    background: rgba(25, 122, 207, 0.8);
+        
+}
+#menu-bar{
+	top: 0;
+	right: 0;
+	position: absolute;
+      
+}
+
+
+#menu-bar{
+	z-index: 2;	
+
+
+}
+
+
+.change #bar1{
+	transform: translateY(4px) rotateZ(-45deg);
+}
+.change #bar3{
+	transform: translateY(-6px) rotate(45deg);
+}
+.change #bar2{
+	opacity: 0;
+}
+.change{
+	display: block;
+    right: 1px;
+    
+}
+
+.web:hover, .ux:hover, .animation:hover, .content:hover{
+    transform: scaleX(1.1) scaleY(1.1);
+}
+
+/*  ABOUT MEE */
+
+.grid-container-about { height: 100%; margin: 0; }
+    
+    
+.grid-container-about * { 
+ 
+ position: relative;
+
+}
+
+.grid-container-about *:after { 
+ 
+ position: absolute;
+ top: 0;
+ left: 0;
+}
+
+.grid-container-about {
+  display: grid;
+  grid-template-columns: 2.5fr 1.5fr;
+  grid-template-rows: 0.2fr 1.3fr 0.7fr;
+  grid-template-areas: "header header" "about pictures" "about contact";
+}
+
+.header { grid-area: header; }
+
+.about { grid-area: about; }
+
+.pictures { grid-area: pictures; }
+
+.contact { grid-area: contact; }
+
+
+
+
+.about {border: 7px solid rgba(9, 47, 79, 0.5);;
+        border-radius: 15%;
+margin-bottom: 5%;}
+
+.about img{width: 70%;
+height: auto;
+margin: 6%;
+}
+
+.pictures img {width: 90%;
+height: auto;
+margin: 5%;
+}
+
+.contact img {width: 90%;
+height: auto;
+margin: 5%;
+margin-top: -20%;
+}
+
+.about p {margin-left: 5%;
+margin-right: 5%;
+text-align:justify;}
+
+/*********   WEEEB   *****/
+
+.grid-container-web { height: 100%; margin: 0; }
+
+.grid-container-web * { 
+ 
+ position: relative;
+    
+
+}
+
+.grid-container-web *:after { 
+  
+ position: absolute;
+ top: 0;
+ left: 0;
+}
+
+.grid-container-web {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.3fr 0.7fr 1fr 1fr 1fr 1fr;
+  grid-template-areas: "header header" "title title" "board text-board" "text-principles principles" "prototype text-prototype" "result text-result";
+grid-gap: 8px;
+}
+
+
+
+.board { grid-area: board; background-color: #3F6e97;}
+
+.text-board { grid-area: text-board;background-color: #5797cf; }
+
+.text-principles { grid-area: text-principles;background-color: #5797cf; }
+
+.principles { grid-area: principles; background-color: #3F6e97;}
+
+.prototype { grid-area: prototype;background-color: #3F6e97; }
+
+.text-prototype { grid-area: text-prototype; background-color: #5797cf;}
+
+.result { grid-area: result;background-color: #5797cf; }
+
+.text-result { grid-area: text-result; background-color: #3F6e97;}
+
+.header { grid-area: header;  }
+
+.title { grid-area: title;  }
+
+
+.board img, .principles img,.prototype img, text-result img {width: 100%;
+height: auto;}
+
+.text-board p,.text-principles p, .text-prototype p, .result p {text-align: justify; width: 100%; font-size: 20px;}
+
+.text-board,.text-principles, .text-prototype, .result {padding-left: 3%;padding-right: 3%;}
+
+/*uxxxxxxxxxxxxxxxxxxxxxxxxx*/
+
+.grid-container-ux { height: 100%; margin: 0; }
+
+.grid-container-ux * { 
+ 
+ position: relative;
+
+}
+
+.grid-container-ux *:after { 
+  
+ position: absolute;
+ top: 0;
+ left: 0;
+}
+
+.grid-container-ux {
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.3fr 0.7fr 1fr 1fr 0.7fr 1fr;
+  grid-template-areas: "header header header header" "title-2 title-2 title-2 title-2" "research research research research-text" "content-text content-2 content-2 content-2" "title-3 title-3 title-3 title-3" "prototype-2 prototype-2 prototype-text prototype-text";
+grid-gap: 8px;}
+
+.header { grid-area: header;   }
+
+.title-2 { grid-area: title-2;   }
+
+.research { grid-area: research;  }
+
+.research-text { grid-area: research-text; background-color:#3F6e97;margin:2%;padding: 4%;text-align: justify; }
+
+.content-text { grid-area: content-text; background-color:#3F6e97;margin:2%;padding: 4%;text-align: justify;}
+
+.content-2 { grid-area: content-2;  }
+
+.title-3 { grid-area: title-3;  }
+
+.prototype-2 { grid-area: prototype-2; }
+
+.prototype-text { grid-area: prototype-text; background-color:#3F6e97; margin:2%;padding: 4%; text-align: justify;}
+
+.research img {width: 93%;
+    height:auto;
+    padding-top:10%;
+    margin:3.5%;}
+
+.content-2 img {width: 90%;
+    height:auto;
+    margin:5%;}
+
+.prototype-2 img {width:96%;
+    height:auto;
+    padding-top:10%;
+    margin:2%;}
+
+
+
+/* ANIMATION */
+
+.grid-container-animation { height: 100%; margin: 0; }
+
+.grid-container-animation * { 
+  
+ position: relative;
+
+}
+
+.grid-container-animation *:after { 
+  ;
+ position: absolute;
+ top: 0;
+ left: 0;
+}
+
+.grid-container-animation {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.3fr 0.7fr 1fr 1fr 0.7fr 1fr 1fr;
+  grid-template-areas: "header header" "title-4 title-4" "animation-syrene animation-text" "shiny-text shiny" "title-5 title-5" "team-text team-text-2" "team-project team-project";
+grid-gap: 8px;}
+
+.header { grid-area: header; }
+
+.title-4 { grid-area: title-4; }
+
+.animation-syrene { grid-area: animation-syrene; }
+
+.animation-text { grid-area: animation-text;background-color: #5797cf; }
+
+.shiny-text { grid-area: shiny-text; background-color: #5797cf}
+
+.shiny { grid-area: shiny; }
+
+.title-5 { grid-area: title-5;   }
+
+.team-text { grid-area: team-text; background-color: #5797cf}
+.team-text-2 { grid-area: team-text-2; background-color: #5797cf}
+.team-project { grid-area: team-project; }
+
+
+.animation-text p, .shiny-text p, .team-text p, .team-text-2 p {text-align: justify;
+ }
+
+.animation-text, .shiny-text, .team-text, .team-text-2 {padding-left:5%; padding-right: 5%;}
+
+.team-project img{width: 60%;padding-bottom: 2%;}
+
+
+/*SYRENE*/
+
+.background {
+  position: relative;
+  height: 395px;
+  width: 640px;
+    
+  background-position: 50% 100%;
+  background-size: cover;
+  ;
+}
+.bubble
+{
+    position: absolute;
+    
+    width: calc(1280px / 2);
+    height: 395px;
+     background: url('../img/Baggrund.png');
+    animation: moveit 2s steps(2) infinite;
+}
+
+.character {
+  position: absolute;
+  
+  bottom: 30px;
+  left: 40px;
+  transform: translate(20%,20%) scale(0.66);
+    width: calc(1595px / 4);
+    height: 504px;
+     background: url('../img/char.png');
+    animation: moveit2 1s steps(4) infinite;
+    
+}
+@keyframes moveit
+{
+    from
+    {
+       background-position: 0; 
+    }
+    to
+    {
+        background-position: 1280px; 
+
+    }
+}
+@keyframes moveit2
+{
+    from
+    {
+       background-position: 0; 
+    }
+    to
+    {
+        background-position: -1595px; 
+
+    }
+}
+
+
+
+
+/*Content*/
+
+
+
+
+.grid-container-content { height: 100%; margin: 0; }
+
+.grid-container-content * { 
+ 
+ position: relative;
+
+}
+
+.grid-container-content *:after { 
+ 
+ position: absolute;
+ top: 0;
+ left: 0;
+}
+
+.grid-container-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.3fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas: "header header"  "title-6 title-6" "group group" "video site" "campaign campaign" "pitch experience";
+grid-gap: 8px;
+}
+
+.header { grid-area: header; }
+.group { grid-area: group; background-color: #5797cf;}
+.video { grid-area: video;background-color: #197acf; }
+
+.site { grid-area: site;background-color: #3f6e97; }
+
+.campaign { grid-area: campaign;background-color: #197acf; }
+
+.pitch { grid-area: pitch; background-color: #3f6e97;}
+
+.experience { grid-area: experience; background-color: #197acf;padding-bottom: 4%;}
+
+.title-6 { grid-area: title-6 ; }
+
+
+ 
+
+.video p, .site p, .campaign p, .pitch p, .experience p, .group p{text-align: justify;} 
+
+.video, .site, .campaign, .pitch, .experience, .group {padding-left: 5%;padding-right: 5%;}
+
+.group {padding-left: 10%;padding-right: 10%;}
+
+
+@media screen and (max-width: 960px) {
+    
+   /*Home page*/ 
+    .grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.3fr 1fr 1fr 1fr  ;
+max-width: 960px;
+           
+  grid-template-areas: "header header"
+      "description description"
+      "basic-web basic-ux"
+      
+      "basic-animation basic-content";}
+
+    .web {width: 90%;margin-left: 5%;
+    margin-right:5%;}
+    .ux {width: 90%;margin-left: 5%;
+    margin-right:5%;}
+    .animation {width: 90%;margin-left: 5%;
+    margin-right:5%;}
+    .content {width: 90%;margin-left: 5%;
+    margin-right:5%;}
+    .text {width: 90%;
+        height: 300px;
+          
+           margin-left: 5%;
+    margin-right:5%;}
+    
+ 
+.hello {font-size: 40px;
+ }
+.welcome {font-size: 30px;
+ }
+.details {font-size: 18px;
+    padding: 0px;}
+    
+    /*About*/
+    
+    .grid-container-about {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas: "header" "pictures" "contact" "about";
+}
+    
+    /* Web*/
+    .grid-container-web {
+  display: grid;
+  max-width: 960px;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.3fr 0.7fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas: "header" "title" "text-board" "board"  "text-principles" "principles" "text-prototype" "prototype"  "result" "text-result";
+}
+    
+    /*ux*/
+    
+    .grid-container-ux {
+
+  display: grid;
+  grid-template-columns: 1fr ;
+  grid-template-rows: 0.3fr 0.7fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas: "header" "title-2" "research" "research-text" "content-2""content-text" "prototype-2" "prototype-text";}
+        
+        
+ /*Animation*/
+        
+ .grid-container-animation {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.3fr 0.7fr 1fr 1fr 0.7fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas: "header" "title-4"  "animation-syrene" "animation-text"  "shiny" "shiny-text" "title-5" "team-text" "team-text-2" "team-project";
+ }
+      
+   /*Content*/
+    
+    .grid-container-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.3fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas: "header"  "title-6" "group" "video" "site" "campaign" "pitch" "experience";
+         
+        
+ }
+
+
+@media screen and (max-width: 736px){
+    
+    /*Home page*/
+    .grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.3fr 1fr 1fr 1fr  ;
+max-width: 736px;
+           
+  grid-template-areas: "header header"
+      "description description"
+      "basic-web basic-ux"
+      
+      "basic-animation basic-content";}
+
+    .web {width: 90%;margin-left: 5%;
+    margin-right:5%;}
+    .ux {width: 90%;margin-left: 5%;
+    margin-right:5%;}
+    .animation {width: 90%;margin-left: 5%;
+    margin-right:5%;}
+    .content {width: 90%;margin-left: 5%;
+    margin-right:5%;}
+    .text {width: 90%;
+        height: 300px;
+          
+           margin-left: 5%;
+    margin-right:5%;}
+    
+    .web, .ux, .animation, .content  {
+    font-size: 10px;}
+    
+    .hello {font-size: 40px;
+ }
+.welcome {font-size: 30px;
+ }
+.details {font-size: 18px;
+    padding: 0px;}
+    
+    
+    /*About*/
+    
+    .grid-container-about {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas: "header" "pictures" "contact" "about";
+}
+    
+    
+ /* Web*/
+    .grid-container-web {
+  display: grid;
+  max-width: 960px;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.3fr 0.7fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas: "header" "title" "text-board" "board"  "text-principles" "principles" "text-prototype" "prototype"  "result" "text-result";}
+ 
+/*Animation*/
+        
+ .grid-container-animation {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.3fr 0.7fr 1fr 1fr 0.7fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas: "header" "title-4"  "animation-syrene" "animation-text"  "shiny" "shiny-text" "title-5" "team-text" "team-text-2" "team-project";
+ }
+      /*Content*/
+    
+    .grid-container-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.3fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas: "header"  "title-6" "group" "video" "site" "campaign" "pitch" "experience";
+      
+}
+
+@media screen and (max-width: 480px){
+    /*Home page*/
+      .grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.3fr 1fr 1fr 1fr  ;
+max-width: 480px;
+           
+  grid-template-areas: "header header"
+      "description description"
+      "basic-web basic-ux"
+      
+      "basic-animation basic-content";}
+
+    .web {width: 90%;margin-left: 5%;
+    margin-right:5%;}
+    .ux {width: 90%;margin-left: 5%;
+    margin-right:5%;}
+    .animation {width: 90%;margin-left: 5%;
+    margin-right:5%;}
+    .content {width: 90%;margin-left: 5%;
+    margin-right:5%;}
+    .text {width: 90%;
+        height: 300px;
+          
+           margin-left: 5%;
+    margin-right:5%;}
+    .web, .ux, .animation, .content  {
+    font-size: 10px;}
+    
+    .hello {font-size: 40px;
+ }
+.welcome {font-size: 30px;
+ }
+.details {font-size: 18px;
+    padding: 0px;}
+    
+    
+    /*About*/
+    
+    .grid-container-about {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas: "header" "pictures" "contact" "about";
+}
+    
+    
+  /* Web*/
+    .grid-container-web {
+  display: grid;
+  max-width: 960px;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.3fr 0.7fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas: "header" "title" "text-board" "board"  "text-principles" "principles" "text-prototype" "prototype"  "result" "text-result";}
+        
+        
+        
+        /*Animation*/
+        
+ .grid-container-animation {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.3fr 0.7fr 1fr 1fr 0.7fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas: "header" "title-4"  "animation-syrene" "animation-text"  "shiny" "shiny-text" "title-5" "team-text" "team-text-2" "team-project";
+ }
+    
+    /*Content*/
+    
+    .grid-container-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.3fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas: "header"  "title-6" "group" "video" "site" "campaign" "pitch" "experience";
+    
+    
+      
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
